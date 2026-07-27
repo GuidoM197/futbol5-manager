@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #ffffff; /* verde muy claro */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.title {
+    color: #047857; /* verde oscuro, jade */
+    font-weight: 600;
+    font-size: 1.5rem;
+}

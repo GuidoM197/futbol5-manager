@@ -1,0 +1,376 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    color: #059669;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+/* Enhanced Message Styles */
+.message {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.message.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideInBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.message.hide {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.success {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    border-color: #34d399;
+}
+
+.error {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #991b1b;
+    border-color: #f87171;
+}
+
+.messageContent {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.messageIcon {
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.success .messageIcon {
+    background-color: #10b981;
+    color: white;
+}
+
+.error .messageIcon {
+    background-color: #ef4444;
+    color: white;
+}
+
+.formError {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    font-weight: 500;
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-3px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(3px, 0, 0);
+    }
+}
+
+@keyframes slideInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(5px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.noFields {
+    text-align: center;
+    padding: 3rem;
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.table th {
+    background-color: #f9fafb;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+}
+
+.table tr:hover {
+    background-color: #f9fafb;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+}
+
+.editButton {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8);
+    color: white;
+}
+
+.editButton:hover {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    transform: translateY(-1px);
+}
+
+.deleteButton {
+    background: linear-gradient(to right, #ef4444, #dc2626);
+    color: white;
+}
+
+.deleteButton:hover {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    transform: translateY(-1px);
+}
+
+.saveButton {
+    background: linear-gradient(to right, #059669, #10b981);
+    color: white;
+}
+
+.saveButton:hover {
+    background: linear-gradient(to right, #047857, #059669);
+}
+
+.cancelButton {
+    background: linear-gradient(to right, #6b7280, #4b5563);
+    color: white;
+}
+
+.cancelButton:hover {
+    background: linear-gradient(to right, #4b5563, #374151);
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+    color: #059669;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-weight: 600;
+    color: #065f46;
+}
+
+.input,
+.textarea,
+.select {
+    padding: 0.75rem;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: white;
+    color: #065f46;
+    font-size: 1rem;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    box-shadow: 0 0 0 2px #6ee7b7;
+    border-color: #34d399;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.timeInputsContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.timeInputsContainer .inputGroup {
+    flex: 1;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+}
+
+.readOnlyField {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .modal {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .modalActions {
+        flex-direction: column;
+    }
+
+    .timeInputsContainer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Animation */
+.container {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

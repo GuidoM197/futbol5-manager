@@ -1,0 +1,332 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.header {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 100%);
+    padding: 32px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.titleSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.iconContainer {
+    padding: 12px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.titleIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1f2937;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.countBadge {
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    color: #374151;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.content {
+    padding: 32px;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skeletonCard {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonHeader {
+    height: 20px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: 30%;
+}
+
+.skeletonLine {
+    height: 16px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeletonLine:last-child {
+    width: 60%;
+}
+
+.errorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px;
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+    border-radius: 12px;
+    border: 1px solid #fecaca;
+}
+
+.errorIcon {
+    width: 24px;
+    height: 24px;
+    color: #dc2626;
+}
+
+.errorMessage {
+    color: #dc2626;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.emptyIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyCalendarIcon {
+    width: 40px;
+    height: 40px;
+    color: #9ca3af;
+}
+
+.emptyTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 12px 0;
+}
+
+.emptyDescription {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+}
+
+.reservationGrid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.reservationCard {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.reservationCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981, #3b82f6);
+}
+
+.reservationCard:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    border-color: #d1d5db;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.fieldInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fieldIconContainer {
+    padding: 12px;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border-radius: 12px;
+}
+
+.fieldIcon {
+    width: 20px;
+    height: 20px;
+    color: #2563eb;
+}
+
+.fieldDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fieldName {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.fieldType {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+}
+
+.statusBadge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pastBadge {
+    background: linear-gradient(135deg, #6b7280, #4b5563);
+    color: white;
+}
+
+.todayBadge {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.upcomingBadge {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.infoRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.infoIcon {
+    width: 16px;
+    height: 16px;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.infoText {
+    color: #374151;
+    font-weight: 600;
+    flex: 1;
+}
+
+.durationBadge {
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    color: #374151;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #d1d5db;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 16px;
+        border-radius: 16px;
+    }
+
+    .header {
+        padding: 24px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .reservationGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .reservationCard {
+        padding: 20px;
+    }
+
+    .titleSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .countBadge {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+}

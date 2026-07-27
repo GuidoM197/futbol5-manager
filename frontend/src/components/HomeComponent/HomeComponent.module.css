@@ -1,0 +1,145 @@
+/* HomeComponent.module.css */
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdfa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heroIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #dcfce7;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.heroTitleHighlight {
+    color: #059669;
+    display: block;
+}
+
+.heroDescription {
+    font-size: 1.25rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.heroDescriptionHighlight {
+    font-weight: 600;
+    color: #059669;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcfce7;
+}
+
+.cardIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #dcfce7;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.cardTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.cardText {
+    color: #6b7280;
+}
+
+.comingSoon {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.comingTitle {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.comingText {
+    color: #a7f3d0;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comingBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+}
+
+.pulseDot {
+    width: 8px;
+    height: 8px;
+    background-color: #a7f3d0;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}

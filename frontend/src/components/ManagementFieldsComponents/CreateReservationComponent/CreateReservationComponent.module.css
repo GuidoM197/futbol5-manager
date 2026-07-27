@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #ffffff; /* verde muy claro de fondo */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.title {
+    color: #059669; /* verde jade fuerte, consistente con .heroTitleHighlight */
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Mejoras adicionales para mejor presentación */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+        max-width: none;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Animación suave para el contenedor */
+.container {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

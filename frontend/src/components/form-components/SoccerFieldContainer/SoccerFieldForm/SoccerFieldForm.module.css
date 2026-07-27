@@ -1,0 +1,97 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff; /* fondo muy claro tipo "jade" */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #111827;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.label {
+    font-weight: 600;
+    color: #065f46; /* verde oscuro para legibilidad */
+    margin-bottom: 0.25rem;
+}
+
+.input,
+.select,
+.emailInput {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: white;
+    color: #065f46;
+    font-size: 1rem;
+}
+
+.input:focus,
+.select:focus,
+.emailInput:focus {
+    box-shadow: 0 0 0 2px #6ee7b7;
+    border-color: #34d399;
+}
+
+.selectWrapper {
+    position: relative;
+}
+
+.select {
+    padding-left: 2.5rem; /* espacio para ícono */
+    appearance: none;
+}
+
+.button {
+    background: linear-gradient(to right, #059669, #10b981);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #047857, #059669);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.button:disabled {
+    background: #d1fae5;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background-color: #d1fae5;
+    color: #065f46;
+    text-align: center;
+}
+
+.inputWrapper {
+    width: 100%;
+}
+
+.inputWrapper input {
+    width: 100%;
+    box-sizing: border-box;
+}

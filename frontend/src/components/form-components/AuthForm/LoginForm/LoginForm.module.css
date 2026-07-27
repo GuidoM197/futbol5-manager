@@ -1,0 +1,59 @@
+.formContainer {
+    margin-top: 2rem;
+}
+
+.icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #9ca3af; /* Gris suave, mismo que usás en textos secundarios */
+}
+
+.submitButton {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(to right, #059669, #047857); /* Verde jade */
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    transition: all 0.2s;
+}
+
+.submitButton:hover {
+    background: linear-gradient(to right, #047857, #065f46); /* Verde más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.spaceBetweenFields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.relativeContainer {
+    position: relative;
+}
+
+.inputWrapper {
+    width: 100%;
+}
+
+.inputWrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1fae5; /* Borde verde claro */
+    border-radius: 0.5rem;
+    background-color: #f0fdf4; /* Fondo verde muy suave */
+    color: #111827;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputWrapper input:focus {
+    outline: none;
+    border-color: #34d399; /* Verde jade medio */
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3); /* Verde menta suave */
+}

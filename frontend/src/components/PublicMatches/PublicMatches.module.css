@@ -1,0 +1,538 @@
+.container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    color: #059669;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.message {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.message.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideInBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.message.hide {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.success {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    border-color: #34d399;
+}
+
+.error {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #991b1b;
+    border-color: #f87171;
+}
+
+.messageContent {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.messageIcon {
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.success .messageIcon {
+    background-color: #10b981;
+    color: white;
+}
+
+.error .messageIcon {
+    background-color: #ef4444;
+    color: white;
+}
+
+.noMatches {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #6b7280;
+}
+
+.noMatchesIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.noMatches h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.noMatches p {
+    font-size: 1.1rem;
+}
+
+.matchesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.matchCard {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.matchCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+}
+
+.matchCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #10b981;
+}
+
+.matchHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.matchStatus {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.slotsInfo {
+    display: flex;
+    align-items: center;
+}
+
+.statusBadge,
+.slotsBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.confirmed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.matchType {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #dbeafe;
+    color: #1e40af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.slotsBadge.available {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.slotsBadge.full {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.statusMessage {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 1px solid #f59e0b;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #92400e;
+}
+
+.statusMessageIcon {
+    font-size: 1rem;
+}
+
+.teamsContainer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.team {
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+}
+
+.teamName {
+    color: #059669;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.teamCount {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+    background-color: #e5e7eb;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.teamMembers {
+    color: #6b7280;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.vsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vs {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 4px rgba(5, 150, 105, 0.3);
+}
+
+.reservationInfo {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.reservationTitle {
+    color: #065f46;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.reservationDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.reservationDetails p {
+    color: #374151;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.reservationDetails strong {
+    color: #065f46;
+}
+
+.matchActions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.joinButton {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(5, 150, 105, 0.3);
+}
+
+.joinButton:hover:not(.disabled) {
+    background: linear-gradient(135deg, #047857 0%, #059669 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+}
+
+.joinButton.disabled {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.leaveButton {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+}
+
+.leaveButton:hover:not(.disabled) {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.leaveButton.disabled {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.confirmButton {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.confirmButton:hover:not(.disabled) {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.confirmButton.disabled {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.confirmedMessage {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid #34d399;
+}
+
+.confirmedIcon {
+    font-size: 1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.paginationButton {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.paginationButton:hover:not(.disabled) {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: white;
+    border-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.paginationButton.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f9fafb;
+}
+
+.pageInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.totalElements {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .matchesGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .teamsContainer {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .vsContainer {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .matchActions {
+        flex-direction: column;
+    }
+
+    .reservationDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .matchHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .statusMessage {
+        text-align: center;
+    }
+
+    .confirmedMessage {
+        justify-content: center;
+    }
+}
+
+.container {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(5px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+

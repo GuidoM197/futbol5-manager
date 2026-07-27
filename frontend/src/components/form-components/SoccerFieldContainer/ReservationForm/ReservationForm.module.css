@@ -1,0 +1,122 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff; /* fondo muy claro y limpio */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #111827;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.label {
+    font-weight: 600;
+    color: #065f46; /* jade oscuro para etiquetas */
+    margin-bottom: 0.25rem;
+}
+
+.select,
+.dateInput,
+.numberInput {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #bbf7d0; /* borde verde claro */
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: white;
+    color: #065f46;
+    font-size: 1rem;
+}
+
+.select:focus,
+.dateInput:focus,
+.numberInput:focus {
+    box-shadow: 0 0 0 2px #6ee7b7;
+    border-color: #34d399;
+}
+
+.button {
+    background: linear-gradient(to right, #059669, #10b981); /* jade */
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #047857, #059669);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.button:disabled {
+    background: #d1fae5;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.mes {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background-color: #d1fae5; /* verde claro */
+    color: #065f46; /* jade oscuro */
+    text-align: center;
+}
+
+/* Nuevos estilos para el resumen de equipos */
+.teamSummary {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.teamSummary h4 {
+    margin: 0 0 0.5rem 0;
+    color: #065f46;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.teamInfo {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    color: #047857;
+}
+
+.editTeamsButton {
+    background: linear-gradient(to right, #059669, #10b981);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.editTeamsButton:hover {
+    background: linear-gradient(to right, #047857, #059669);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}

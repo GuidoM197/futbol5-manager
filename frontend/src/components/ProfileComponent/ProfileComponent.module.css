@@ -1,0 +1,449 @@
+.container {
+    max-width: 850px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    position: relative;
+    padding: 0;
+}
+
+.headerBackground {
+    height: 120px;
+    background: linear-gradient(135deg, #065f46 0%, #047857 50%, #10b981 100%);
+    position: relative;
+}
+
+.headerBackground::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1));
+}
+
+.profileSection {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 2.5rem;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+}
+
+.photoContainer {
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.photoContainer,
+.initialContainer {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photoOverlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.photoOverlay:hover {
+    transform: scale(1.1);
+}
+
+.cameraIcon {
+    font-size: 0.8rem;
+}
+
+.userInfo {
+    flex: 1;
+    padding-bottom: 1rem;
+}
+
+.userName {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.2;
+}
+
+.userEmail {
+    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    max-width: 280px;
+    text-align: center;
+}
+
+.roleBadge {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.roleOwner {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+}
+
+.roleUser {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+.roleAdmin {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.roleDefault {
+    background: linear-gradient(135deg, #6b7280, #4b5563);
+    color: white;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.infoGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.infoCard {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #10b981;
+}
+
+.infoIcon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 10px;
+    filter: grayscale(0.2);
+}
+
+.infoContent {
+    flex: 1;
+}
+
+.infoLabel {
+    display: block;
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.infoValue {
+    display: block;
+    font-size: 1.125rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.actionButtons {
+    margin-top: 2rem;
+}
+
+.editButton {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.editButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(16, 185, 129, 0.4);
+}
+
+.buttonIcon {
+    font-size: 1.1rem;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.formSection {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 1rem 0;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.input,
+.select {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    color: #1f2937;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.disabledInput {
+    background: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.note {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.fileInputLabel {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    color: #374151;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.fileInputLabel:hover {
+    background: linear-gradient(135deg, #d1d5db, #9ca3af);
+}
+
+.fileInput {
+    display: none;
+}
+
+.formActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.saveButton {
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.saveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cancelButton {
+    padding: 0.875rem 2rem;
+    background: #f3f4f6;
+    color: #374151;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+}
+
+.errorMessage {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    font-weight: 500;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingText {
+    color: #6b7280;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        border-radius: 16px;
+    }
+
+    .profileSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .photoContainer {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formActions {
+        flex-direction: column;
+    }
+
+    .saveButton,
+    .cancelButton {
+        width: 100%;
+    }
+}

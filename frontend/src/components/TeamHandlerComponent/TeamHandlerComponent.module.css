@@ -1,0 +1,26 @@
+.createTeamButton {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, #22c55e, #10b981);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 12px;
+}
+
+.createTeamButton:hover {
+    background: linear-gradient(90deg, #16a34a, #059669);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.createTeamButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

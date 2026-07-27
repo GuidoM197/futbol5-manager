@@ -1,0 +1,38 @@
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4B5563;
+  margin-bottom: 0.5rem;
+}
+
+.dataContainer {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.35rem 2.5rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  background-color: #F9FAFB;
+  color: #1F2937;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: white;
+}
+
+.input:hover {
+  border-color: #6366F1;
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
